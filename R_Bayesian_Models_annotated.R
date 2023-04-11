@@ -99,7 +99,7 @@ fit_lin_1 <-brm(in_phase_1_to_out_of_phase_2 ~ groupn,
 summary(fit_lin_1)
 
 # Obtain highest density posterior interval
-bayestestR::hdi(fit_lin_2, ci=0.95) 
+bayestestR::hdi(fit_lin_1, ci=0.95) 
 
 # Syntax: plot() - print Bayesian diagnostic plots to console, plots in one figure
 plot(fit_lin_1)

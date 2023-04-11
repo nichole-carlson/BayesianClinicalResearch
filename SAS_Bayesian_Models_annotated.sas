@@ -1,5 +1,5 @@
 *************************************************************************************************
-*	TITLE: 			SAS CODE FOR FITTIN MODELS IN A BAYESIAN FRAMEWORK
+*	TITLE: 			SAS CODE FOR FITTING MODELS IN A BAYESIAN FRAMEWORK
 *	LAST REVISED:	09Feb2022
 *	BACKGROUND: 	Data were obtained from a randomized, prospective clinical trial investigating the performance of 
 *					two analgesics at an ambulatory surgical center. The purpose of the original trial was to determine 
@@ -18,7 +18,7 @@
 *	SET WORKING DIRECTORY AND PROGRAM OPTIONS *;
 
 ************************************************************************* ;
-%let root   =  C:\Users\username\Documents\Bayesian;
+%let root   =  C:\Users\USERNAME\Documents\Bayesian;
 libname data  		"&root\Data";
 options fmtsearch =	(data.formats work) ; 
 ods graphics on;
@@ -32,19 +32,6 @@ proc import datafile = "&root\Data\drugtrial.csv"
 	guessingrows = 50 ;
 run;
 
-
-
-
-%let root   =  C:\Users\salauren\Documents\Projects\Bayesian\Code;
-libname data  		"&root\Supplemental_Materials";
-options fmtsearch =	(data.formats work) ; 
-proc import datafile = "C:\Users\salauren\Documents\Projects\Bayesian\Code\Supplemental_Materials\drugtrial.csv"
-	out = data.trial
-	dbms = csv 
-		replace;
-	getnames = yes;
-	guessingrows = 50 ;
-run;
 
 ************************************************************************* ;
 
